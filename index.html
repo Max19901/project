@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="libs/animate/animate.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<header class="main">
+		<div class="top-line">
+			<div class="container">
+				<div class="row">	
+					<div class="col-md-3 col-sm-6 col-xs-3">
+						<a href="#" class="logo"><img src="img/logo.svg" alt="logo"></a>
+					</div>
+
+					<div class="col-lg-2 col-md-9 col-sm-6 col-xs-9 col-lg-push-7">
+						<div class="phone-wrap">
+							<div class="phone">+38 (099)2313238</div>
+							<a href="#" class='toggle-menu hidden-lg'><span></span></a>
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-12 col-lg-pull-2">
+						<nav class="top-menu">
+							<ul>
+								<li><a href="#section_1">Оценка</a></li>
+								<li><a href="#section_2">Сделки M&amp;A</a></li>
+								<li><a href="#section_3">Бухгалтерские услуги</a></li>
+								<li><a href="#section_6">Контакты</a></li>
+
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-wrapper ">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 ">
+						<div class="header-left">
+							<h1>Armata Financical Group</h1>
+							<ul>
+								<li>Независимая оценка имущества</li>
+								<li>Сделки cлияния и поглощения</li>
+								<li>Бухгалтерские услуги</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<form  class="forms">
+							<h4>Заявка:</h4>
+							<p>Оставьте заявку и мы свяжемся с вами в течение 15 минут в рабочее время с 10:00 до 18:00 c пн-пт.</p>
+							<label>
+								<span>Ваше имя:</span>
+								<input type="text" name="name" required>
+							</label>
+							<label>
+								<span>Ваше телефон:</span>
+								<input type="text" name="phone" required>
+							</label>
+							<div class="button-wrap">
+								<button class="buttons">Отрпавить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="button-wrap">
+				<div class="arrow"></div>
+			</div>
+		</div>
+	</header>
+	<section class="homesect section_1" id="section_1">
+		<div class="container">	
+			<div class="row">
+				<div class="section-head col-md-10 col-md-offset-1">
+					<h2>НЕЗАВИСИМАЯ ОЦЕНКА ИМУЩЕСТВА</h2>
+					<p><strong>Определение рыночной стоимости</strong> любого актива, или оценка — это первый этап всех рыночных отношений. Оценка заключается в объективном анализе объекта с целью придания ему стоимостных характеристик, выраженных в едином денежном эквиваленте.</p>
+				</div>
+			</div>
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Оценка ценных бумаг</h4>
+							<p>Определение рыночной стоимости ценных бумаг и документов</p>
+						</div>
+					</div>
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Оценка бизнеса и предприятий</h4>
+							<p>Профессиональная оценка бизнес-активов предприятия</p>
+						</div>
+					</div>
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Оценка недвижимости</h4>
+							<p>Профессиональная оценка жилого и нежилого имущества</p>
+						</div>
+					</div>
+					<div class="col-sm-8 info-item-wrap">
+						<div class="info-item">
+							<h4>Оценка машин и оборудования</h4>
+							<p>Профессиональная оценка машин и оборудования для бизнеса</p>
+						</div>
+					</div>
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Оценка инвестиционных проектов</h4>
+							<p>Независимая оценка бизнес проектов любого направления</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="s1-bottom-triangle">
+				<img src="img/logo_triangle.svg" class="logo_trg" alt="logotip">
+				<img src="img/icons/section_1/scales.svg" class="ves" alt="scales">
+			</div>
+		</div>
+		<div class="s1-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 info-item-wrap" >
+						<div class="info-item info_item" >
+							<h4>Оценка нематериальных активов</h4>
+							<p>Определение стоимости нематериальных активов различных видов</p>
+						</div>
+					</div>
+					<div  class="col-sm-4 info-item-wrap" >
+						<div class="info-item info_item" >
+							<h4>Оценка себестоимости продукции</h4>
+							<p>Определение себестоимости продукции производства</p>
+						</div>
+					</div>
+					<div  class="col-sm-4 info-item-wrap" >
+						<div class="info-item info_item" >
+							<h4>Бизнес-планирование и оценка</h4>
+							<p>Разработка бизнес-плана и оценка его эффективности</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<div class="section-bottom">
+		<a href="#callback" class="buttons">Заказать оценку</a>
+	</div>
+
+	<section class="homesect section_2"  id="section_2">
+		<div class="container">	
+			<div class="row">
+				<div class="section-head col-md-10 col-md-offset-1">
+					<h2>СДЕЛКИ M&amp;A</h2>
+					<p><strong>Сделки cлияния и поглощения</strong> – это процессы укрупнения бизнеса и капитала. Популярность сделки слияния и поглощения приобрели в конце 80-х годов и сейчас они являются одним из основных движущих факторов развития бизнеса на макро и микроуровне. Эффективность сделок слияния и поглощения огромна и не вызывает сомнений.</p>
+					<h3>НАШИ УСЛУГИ ПО СОПРОВОЖДЕНИЮ СДЕЛОК M&amp;A</h3>
+				</div>
+
+			</div>
+		</div>
+		<div class="s_wrap">
+			<div class="s2-items">
+				<div class="container">	
+					<div class="s2-item-container">
+						<div  class="s2-item-wrp">
+							<div class="s2-item">
+								<span class="img-wrap">
+									<img src="img/icons/section_2/1.svg" alt="alt">
+
+								</span>
+								<span class="s2-item-text">Разработка новой структуры управления бизнесом</span>
+							</div>
+
+
+						</div>
+						<div  class="s2-item-wrp">
+							<div class="s2-item">
+								<span class="img-wrap">
+									<img src="img/icons/section_2/2.svg" alt="alt">
+
+								</span>
+								<span class="s2-item-text">Консультации по предпродажной подготовке бизнеса</span>
+							</div>
+
+
+						</div>
+						<div  class="s2-item-wrp">
+							<div class="s2-item">
+								<span class="img-wrap">
+									<img src="img/icons/section_2/3.svg" alt="alt">
+
+								</span>
+								<span class="s2-item-text">Анализ стоимости бизнеса и активов</span>
+							</div>
+
+
+						</div>
+						<div  class="s2-item-wrp">
+							<div class="s2-item">
+								<span class="img-wrap">
+									<img src="img/icons/section_2/4.svg" alt="alt">
+
+								</span>
+								<span class="s2-item-text">Консультации с покупателями и сопровождение</span>
+							</div>
+
+
+						</div>
+						<div class="s2-item-wrp">
+							<div class="s2-item">
+								<span class="img-wrap">
+									<img src="img/icons/section_2/5.svg" alt="alt">
+
+								</span>
+								<span class="s2-item-text">Юридический аудит приобретаемого актива</span>
+							</div>
+
+
+						</div>
+						<div  class="s2-item-wrp">
+							<div class="s2-item">
+								<span class="img-wrap">
+									<img src="img/icons/section_2/6.svg" alt="alt">
+
+								</span>
+								<span class="s2-item-text">Разработка оптимальной схемы приобретения актива</span>
+							</div>
+
+
+						</div>
+						<div  class="s2-item-wrp">
+							<div class="s2-item">
+								<span class="img-wrap">
+									<img src="img/icons/section_2/7.svg" alt="alt">
+
+								</span>
+								<span class="s2-item-text">Организация финансирования сделки</span>
+							</div>
+
+
+						</div>
+						<div  class="s2-item-wrp">
+							<div class="s2-item">
+								<span class="img-wrap">
+									<img src="img/icons/section_2/8.svg" alt="alt">
+
+								</span>
+								<span class="s2-item-text">Подготовка и сопровождение документации</span>
+							</div>
+
+
+						</div>
+						<div  class="s2-item-wrp">
+							<div class="s2-item">
+								<span class="img-wrap">
+									<img src="img/icons/section_2/10.svg" alt="alt">
+
+								</span>
+								<span class="s2-item-text">Интеграция нового актива в схему управления холдингом</span>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section-bottom">
+			<a href="#callback" class="buttons">Заказать сопровождение</a>
+		</div>
+
+	</section>
+	<section class="homesect s-dark section_3"  id="section_3">
+		<div class="container">	
+			<div class="row">
+				<div class="section-head sect3 col-md-10 col-md-offset-1">
+					<h2>БУХГАЛТЕРСКИЕ УСЛУГИ</h2>
+					<p><strong>Бухгалтерский учёт</strong>это строго структурированная система сбора, регистрации и систематизации информации в денежном выражении о состоянии имущества, обязательств организации и их изменениях путём сплошного, непрерывного и документального учёта всех хозяйственных и экономических операций.</p>
+				</div>
+			</div>
+		</div>
+		<div class="section-content">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Документальное оформление</h4>
+							<p>Документальное оформление всех хозяйственных операций предприятия</p>
+						</div>
+					</div>
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Обработка данных</h4>
+							<p>Обработка, систематизация и введение данных в бухгалтерскую программу</p>
+						</div>
+					</div>
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Расчеты</h4>
+							<p>Расчет заработной платы и налогов</p>
+						</div>
+					</div>
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Формирование отчетности</h4>
+							<p>Формирование финансового результата предприятия</p>
+						</div>
+					</div>
+					<div class="col-sm-4 wrapper">
+						<div class="s3-img-wrap ">
+							<img src="img/icons/section_3/folder.svg" alt="folder">
+						</div>
+					</div>
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Налоговая отчетность</h4>
+							<p>Оформление и подача бухгалтерской и налоговой отчетности в соответствующие</p>
+						</div>
+					</div>
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Консультирование организаций</h4>
+							<p>Консультирование по вопроса оптимизации финансовой функции и бухгалтерскому учету</p>
+						</div>
+					</div>
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Помощь в подборе персонала</h4>
+							<p>Помощь в подборе персонала в отдел бухгалтерского и налогового учета</p>
+						</div>
+					</div>
+					<div class="col-sm-4 info-item-wrap">
+						<div class="info-item">
+							<h4>Восстановление бухгалтерского учета</h4>
+							<p>Восстановление функционирования предприятия и бухгалтерского учета</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="section-bottom">
+			<a href="#callback" class="buttons">Заказать бухгалтерские услуги</a>
+		</div>
+	</section>
+	<section class="homesect s-gray section_4">
+		<div class="container">	
+			<div class="row">
+				<div class="section-head col-md-10 col-md-offset-1">
+					<h2>ПРЕИМУЩЕСТВА ARMATA FINANCICAL GROUP</h2>
+					<p>Компания AFG поддерживает российские и иностранные компании, работающие на отечественном рынке в решении задач экономического роста, защиты своих интересов, управления текущей деятельностью. Помогает создавать системы владения активами, устанавливает коммуникации с новыми партнерами и рынками, организует сделки и привлекает капиталы.</p>
+					<h3>ПРИВЛЕКАТЕЛЬНЫЕ УСЛОВИЯ СОТРУДНИЧЕСТВА</h3>
+				</div>
+
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="section-pb">
+					<div class="cards">
+						<div class="card card-off">
+							<div class="card-icon">
+								<img src="img/icons/section_4/1.svg" alt="sales">
+
+							</div>
+							<h4>Скидки</h4>
+							<p>Предоставляем всем нашим клиентам уникальную возможность получить скидку <span>50% </span>на все услуги</p>
+						</div>
+						<div class="card card-off">
+							<div class="card-icon">
+								<img src="img/icons/section_4/2.svg" alt="team">
+
+							</div>
+							<h4>СКОРОСТЬ</h4>
+							<p>Приступаем к выполнению обязательст в день обращения в нашу компанию</p>
+						</div>
+						<div class="card card-off">
+							<div class="card-icon">
+								<img src="img/icons/section_4/3.svg" alt="time">
+
+							</div>
+							<h4>Скидки</h4>
+							<p>Предоставляем всем нашим клиентам уникальную возможность получить скидку <span>50% </span>на все услуги</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section-bottom">
+			<a href="#callback" class="buttons">Обратиться к нам</a>
+		</div>
+	</section>
+	<section class="homesect s-dark section_5">
+		<div class="container">	
+			<div class="row">
+				<div class="section-head sect3 col-md-10 col-md-offset-1">
+					<h2>КАК МЫ РАБОТАЕМ</h2>
+				</div>
+			</div>
+		</div>
+		<div class="trng-container">
+			<div class="container">
+				<div class="row">
+					<div class="tc-item">
+
+						<div class="tc-content">
+							<img src="img/icons/section_5/1.svg" alt="1">
+							<span>1.</span>Подписываем договор
+						</div>
+
+
+						<svg viewBox="0 0 291.01178 129" height="129" width="291.01178" version="1.1" id="tc-svg-0">
+							<path  d="M 3.4644996,126.28999 3.1137219,4.0613763 l 240.7182181,0 43.11847,58.7692707 -43.28202,63.461773 z" style="fill:#f39f18;fill-opacity:0;stroke-opacity:0; stroke:#f39f18; stroke-width:5px" />
+						</svg>
+
+
+					</div>
+					<div class="tc-item">
+						<div class="tc-content">
+							<img src="img/icons/section_5/2.svg" alt="1">
+							<span>2.</span>Подписываем договор
+						</div>
+						<svg  viewBox="0 0 291.01178 129" height="129" width="291.01178" version="1.1" id="tc-svg-1">
+							<path stroke-width="5px"  d="M 3.3821314,126.02828 46.475601,62.999427 3.0313514,3.799673 l 240.7182186,0 43.11847,58.769271 -43.28202,63.461766 z" style="fill:#f39f18;fill-opacity:0; stroke-opacity:0; stroke:#f39f18; stroke-width:5px" />
+						</svg>
+					</div>
+					<div class="tc-item">
+						<div class="tc-content">
+							<img src="img/icons/section_5/3.svg" alt="1">
+							<span>3.</span>Мы проводим оценку
+						</div>
+						<svg     viewBox="0 0 291.01178 129" height="129" width="291.01178" version="1.1" id="tc-svg-2">
+							<path  d="M 3.3821314,126.02828 46.475601,62.999427 3.0313514,3.799673 l 240.7182186,0 43.11847,58.769271 -43.28202,63.461766 z" style="fill:#f39f18;fill-opacity:0;stroke-opacity:0; stroke:#f39f18; stroke-width:5px" />
+						</svg>
+					</div>
+					<div class="tc-item">
+						<div class="tc-content">
+							<img src="img/icons/section_5/4.svg" alt="1">
+							<span>4.</span>Вы получаете отчет
+						</div>
+						<svg     viewBox="0 0 291.01178 129" height="129" width="291.01178" version="1.1" id="tc-svg-3">
+							<path  d="M 3.3821314,126.02828 46.475601,62.999427 3.0313514,3.799673 l 240.7182186,0 43.11847,58.769271 -43.28202,63.461766 z" style="fill:#f39f18;fill-opacity:0;stroke-opacity:0; stroke:#f39f18; stroke-width:5px" />
+						</svg>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="section-bottom">
+			<a href="#callback" class="buttons">Оставить заявку</a>
+		</div>
+	</section>
+	<section class="homesect section_6"  id="section_6">
+		<div class="section-pb">
+			<div class="container">	
+				<div class="row">
+					<div class="section-head col-md-10 col-md-offset-1">
+						<h2>С КЕМ МОЖНО СВЯЗАТЬСЯ ЧЕРЕЗ САЙТ</h2>
+						<p>Свяжитесь с одним из сотрудников и получите консультацию по работе с нашей компанией.</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+
+					<div class="teams">
+						<div class="team team-off">
+							<div class="card-icon">
+								<img src="img/team/1.jpg" alt="sales">
+
+							</div>
+							<h4>Евгений Александрович</h4>
+							<p>Директор компании</p>
+							<div class="team-phone">
+								+38 (099) 231 32 38
+							</div>
+						</div>
+						<div class="team team-off">
+							<div class="card-icon">
+								<img src="img/team/2.jpg" alt="team">
+
+							</div>
+							<h4>Виталий Дое</h4>
+							<p>Менеджер продаж</p>
+							<div class="team-phone">
+								+38 (099) 231 32 38
+							</div>
+						</div>
+						<div class="team team-off">
+							<div class="card-icon">
+								<img src="img/team/3.jpg" alt="time">
+
+							</div>
+							<h4>Екатерина</h4>
+							<p>Старший менеджер</p>
+							<div class="team-phone">
+								+38 (099) 231 32 38
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="homesect s-gray section_7">
+		<div class="container">	
+			<div class="row">
+				<div class="section-head col-md-10 col-md-offset-1">
+					<h2>ОТЗЫВЫ КЛИЕНТОВ</h2>
+					<p>Послушайте, что о нас говорят благодарные клиенты:</p>
+				</div>
+
+			</div>
+		</div>
+		<div class="section-pb">
+			<div class="slider ">
+				<div class="slide">
+					<div class="container">	
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="img-wrap">
+									<img src="img/team/1.jpg" alt="Review">
+
+								</div>
+								<h3>Михаил Алексеевич Потапов</h3>
+								<div class="slide-description">ООО "Роскомнадзор"</div>
+								<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок вскоре, деревни? Вопроса строчка пор, последний вершину заглавных единственное? Над щеке злых, залетают то безорфографичный своих текстов бросил живет. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок вскоре, деревни? Вопроса строчка пор, последний вершину заглавных единственное? Над щеке злых, залетают то безорфографичный своих текстов бросил живет.</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="container">	
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="img-wrap">
+									<img src="img/team/2.jpg" alt="Review">
+
+								</div>
+								<h3>Михаил Алексеевич Потапов</h3>
+								<div class="slide-description">ООО "Роскомнадзор"</div>
+								<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок вскоре, деревни? Вопроса строчка пор, последний вершину заглавных единственное? Над щеке злых, залетают то безорфографичный своих текстов бросил живет. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок вскоре, деревни? Вопроса строчка пор, последний вершину заглавных единственное? Над щеке злых, залетают то безорфографичный своих текстов бросил живет.</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="container">	
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<div class="img-wrap">
+									<img src="img/team/3.jpg" alt="Review">
+
+								</div>
+								<h3>Михаил Алексеевич Потапов</h3>
+								<div class="slide-description">ООО "Роскомнадзор"</div>
+								<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок вскоре, деревни? Вопроса строчка пор, последний вершину заглавных единственное? Над щеке злых, залетают то безорфографичный своих текстов бросил живет. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок вскоре, деревни? Вопроса строчка пор, последний вершину заглавных единственное? Над щеке злых, залетают то безорфографичный своих текстов бросил живет.</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="homesect section_8">
+
+		<div class="container">	
+			<div class="section-pb">
+				<div class="row">
+					<div class="col-md-8 s8-left">
+						<div class="section-head ">
+							<h2>МЫ - ПРОФЕССИОНАЛЫ!</h2>
+							<p>Наши специалисты являются профессионалами высочайшего класса, лауреатами и призерами многих конкурсов и первенств в области финансов и бухгалтерии. За своими плечами имеют богатый опыт осуществления проектов в области оценки, ведения бухгалтерии, слияний и присоединений в сферах строительства, жилищно-коммунальных услуг, производства, аэрокосмической промышленности и прочих.</p>
+						</div>
+						<div class="s8-items">
+							<div class="row">
+								<div class="s8-item col-sm-3 col-xs-6">
+									<div class="img-wrap">
+										<img src="img/icons/section_8/1.svg" alt="ACC">
+									</div>
+									<p>Диплом по налогообложению РФ (ДипНРФ), квалификация ACCA</p>
+								</div>
+
+								<div class="s8-item col-sm-3 col-xs-6">
+									<div class="img-wrap">
+										<img src="img/icons/section_8/2.svg" alt="Atest">
+									</div>
+									<p>Аттестат профессионального бухгалтера Института профессиональных бухгалтеров России</p>
+								</div>
+
+
+								<div class="s8-item col-sm-3 col-xs-6">
+									<div class="img-wrap">
+										<img src="img/icons/section_8/3.svg" alt="atetst">
+									</div>
+									<p>Аттестат налогового консультанта 2-й категории Палаты налоговых консультантов России</p>
+								</div>
+
+								<div class="s8-item col-sm-3 col-xs-6">
+									<div class="img-wrap">
+										<img src="img/icons/section_8/4.svg" alt="ACC">
+									</div>
+									<p>Призер Первой всероссийской премии бухгалтеров строительной отрасли «Профессиональные грани-2011»</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<form  class="forms">
+							<h4>Заявка:</h4>
+
+							<p>Оставьте заявку и мы свяжемся с вами в течение 15 минут в рабочее время с 10:00 до 18:00 c пн-пт.</p>
+							<label>
+								<span>Ваше имя:</span>
+								<input type="text" name="name" required>
+							</label>
+							<label>
+								<span>Ваше телефон:</span>
+								<input type="text" name="phone" required>
+							</label>
+							<div class="button-wrap">
+								<button class="buttons">Отрпавить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="main-footer homesect s-dark">
+		<div class="container">
+			<div class="row">	
+				<div class="footer-content">
+					<div class="footer-line">
+						<div class="container">
+							<div class="row">	
+								<div class="col-md-3 col-sm-6 col-xs-3">
+									<a href="#" class="logo"><img src="img/logo.svg" alt="logo"></a>
+								</div>
+								<div class="col-lg-2 col-md-9 col-sm-6 col-xs-9 col-lg-push-7">
+									<div class="phone-wrap">
+										<div class="phone">+38 (099)2313238</div>
+										<a class='toggle-menu hidden-lg'><span></span></a>
+									</div>
+								</div>
+								<div class="col-lg-7 col-md-12 col-lg-pull-2">
+									<nav class="top-menu">
+										<ul>
+											<li><a href="#section_1">Оценка</a></li>
+											<li><a href="#section_2">Сделки M&amp;A</a></li>
+											<li><a href="#section_3">Бухгалтерские услуги</a></li>
+											<li><a href="#section_6">Контакты</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<div class="top">	
+		
+	</div>
+	<div class="hidden">
+		<form  class="forms" id="callback">
+			<h4>Заявка:</h4>
+			<p>Оставьте заявку и мы свяжемся с вами в течение 15 минут в рабочее время с 10:00 до 18:00 c пн-пт.</p>
+			<label>
+				<span>Ваше имя:</span>
+				<input type="text" name="name" required>
+			</label>
+			<label>
+				<span>Ваше телефон:</span>
+				<input type="text" name="phone" required>
+			</label>
+			<div class="button-wrap">
+				<button class="buttons">Отрпавить</button>
+			</div>
+		</form>
+	</div>
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript" src="libs/modernizr/modernizr.js" ></script>
+	<script type="text/javascript" src="js/common.js" ></script>
+	<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="libs/waypoints/waypoints.min.js" ></script>
+	<script type="text/javascript" src="libs/equalHeight/jquery.equalheights.min.js" ></script>
+	<script type="text/javascript" src="libs/drawsvg/drawfillsvg.min.js" ></script>
+	<script type="text/javascript" src="libs/Magnific-Popup/jquery.magnific-popup.min.js" ></script>
+	<script type="text/javascript" src="libs/owl/owl.carousel.min.js" ></script>
+	<script type="text/javascript" src="libs/animate/animate-css.js"></script>
+</body>
+</html>
