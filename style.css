@@ -18,7 +18,7 @@ body{
 a, a:hover, a:focus{
 	color: #F39F18;
 	text-decoration: none;
-
+	outline: 0;
 }
 a:visited,a:active{
 	color: #111;
